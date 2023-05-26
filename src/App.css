@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Roboto&display=swap');
+*{
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* max 375 X 667 */
+
+body{
+  background-color: #410b0b;
+  color: aliceblue;
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  
+}
+
+h1{
+  font-size: 90px;
+  padding: 80px 0px 60px 0px;
+  display: flex;
+  justify-content: center;
+}
+
+p{
+  font-size: 40px;
+  padding: 0px 0px 60px 0px;
+  display: flex;
+  justify-content: center;
+}
+
+.gameContainer{
+  padding: 20px 30px;
+  /* position: relative; */
+  margin-bottom: 50px;
+  height: 700px;
+  width: 700px;
+}
+
+.figureContainer {
+  fill: transparent;
+  stroke: #fff;
+  stroke-width: 4px;
+  stroke-linecap: round;
+  margin-top: 10px;
+}
+
+.wrongLettersContainer {
+  position:absolute;
+  top: 380px;
+  right: 160px;
+  display: flex;
+  flex-direction: column;
+  text-align: right;  
+  width: 230px;
+  font-size: 40px;
+  padding-bottom: 5px;
+}
+
+.wrongLettersContainer p {
+  margin: 2px 0px 0px 0px;
+  padding-bottom: 30px;
+}
+
+.wrongLettersContainer span {
+  font-size: 40px;  
+}
+
+.word {
+  display: flex;
+  justify-content: center;
+  bottom: 10px;
+  left: 50%;    
+  font-size: 40px;
+}
+
+.letter {
+  border-bottom: 3px solid #ffffff;
+  display: inline-flex;
+  font-size: 40px;
+  align-items: center;
+  justify-content: center;
+  margin: 0 3px;
+  height: 50px;
+  width: 20px;
+}
+
+.popUpContainer {
+  background-color: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  /* display: flex; */
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.popUp {
+  background: #2980b9;
+  border-radius: 5px;
+  box-shadow: 0 15px 10px 3px rgba(0, 0, 0, 0.1);
+  padding-top: 80px;
+  text-align: center;
+  font-size: 25px;
+  height: 300px;
+  width: 500px;
+}
+
+.popUp button {
+  cursor: pointer;
+  background-color: #fff;
+  color: #2980b9;
+  border: 0;
+  margin-top: 20px;
+  padding: 12px 20px;
+  font-size: 16px;
+}
+
+.popUp button:active {
+  transform: scale(0.98);
+}
+
+.popUp button:focus {
+  outline: 0;
+}
+
+.notificationContainer {
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 10px 10px 0 0;
+  padding: 15px 20px;
+  position: absolute; 
+  display: none;
+  transition: transform 0.3s ease-in-out;
+}
+
+.notificationContainer p {
+  margin: 0;
+}
+
+.notificationContainer.show {
+ display: block;
+}
+
+@media (min-width: 1024px) {
+  h1{
+    font-size: 80px;
+    padding: 15px 0px 10px 0px;    
+  }
+
+  p{
+    font-size: 30px;
+    padding: 0px 0px 0px 0px;    
+  }
+
+  .gameContainer {
+    padding: 20px 30px;
+    position: relative;
+    margin: auto;
+    height: 350px;
+    width: 450px;    
+  }
+
+  .figureContainer {
+    transform: scale(0.5);
+    position:absolute;
+  top: -110px;
+  right: 140px;  
+  }
+
+  .wrongLettersContainer {
+    position:absolute;
+    top: 20px;
+    right: 0px;    
+    font-size: 10px;    
+  }
+
+  .word {
+    position: absolute;    
+  } 
+}
